@@ -12,3 +12,11 @@ print(a)
 
 print(node3)
 print(sess.run(node3))
+
+a = tf.placeholder(tf.float32)
+b = tf.placeholder(tf.float32)
+adder_node = a+b
+
+
+print(sess.run(adder_node*3, {a: 3, b: 4.5}))
+print(sess.run(adder_node*3, {a: [4, 5, 6], b: [7, 8, 9, ]}))
